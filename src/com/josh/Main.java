@@ -4,7 +4,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.lang.reflect.Array;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.DoubleSummaryStatistics;
 
 
@@ -13,31 +15,28 @@ public class Main {
     public static void main(String[] args) throws IOException {
        FileReader readme = new FileReader("coffee.txt");  //give file a variable
         BufferedReader bufReader = new BufferedReader(readme);  //
+
+        ArrayList inputList = new ArrayList();
         String line = bufReader.readLine();
 
         /*while (line != null) {
-            line = bufReader.readLine();
+            line = bufReader.readLine();                //printing out the file information
             System.out.println(line);
         }*/
-        for (int x = 0; x < 12; x++) {
-            for (int y = 0; y < 3; y++) {
-                String[] temp = line.split(";");
-                String drinkName = temp[x];
-                String temp0 = temp[0];  //drink name
-                String temp1 = temp[1];  //drink cost to make
-                String temp2 = temp[2];  //drink cost sold
-                double temp1FromString = Double.parseDouble(temp1);
-                double temp2FromString = Double.parseDouble(temp2);
 
+        while (line != null) {
+            System.out.println(line);
+            String [] item = line.split(";");
+            inputList.add(item[0]);
+            inputList.add(Double.parseDouble(item[1]));
+            inputList.add(Double.parseDouble(item[2]));
+            line = bufReader.readLine();
+        }
 
-                System.out.println(temp[x]);
+        System.out.println(inputList);
 
-                Drink drinkName =
-                        new Drink(temp0, temp1FromString, temp2FromString);
-
-                Drink espresso =
-                        new
-            }
+                //Drink espresso =
+                 //    new Drink(ArrayList(0), temp1FromString, temp2FromString);
             }
     }
-}
+
