@@ -37,21 +37,21 @@ public class Main {
         }
         bufReader.close();
 
-        System.out.println(inputList);
-        String tempName = inputList.get(0).toString();
-        double tempCostToMake = Double.parseDouble(inputList.get(1).toString());
-        double tempCostToCustomer = Double.parseDouble(inputList.get(2).toString());
+        System.out.println(inputList);     //testing purposes
+        String tempName = inputList.get(0).toString();      //workaround which is way to much code
+        double tempCostToMake = Double.parseDouble(inputList.get(1).toString());      //workaround which is way too much code
+        double tempCostToCustomer = Double.parseDouble(inputList.get(2).toString());     //workaround which is way too much code
 
         /*    Drink cappuccino =
                     new Drink(inputList.get(0).toString(), Double.parseDouble(inputList.get(1).toString()), (inputList.get(2).toString()); //tempName, tempCostToMake, tempCostToCustomer
             cappuccino.sold();
             cappuccino.writeEndOfDay();
         */
-        //method to change variable z and to
+
         Drink cappuccino =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        cappuccino.sold();
-        cappuccino.writeEndOfDay();
+        cappuccino.sold();        //method to get amount sold
+        cappuccino.writeEndOfDay();       //method to write file
 
         tempName = inputList.get(3).toString();
         tempCostToMake = Double.parseDouble(inputList.get(4).toString());
