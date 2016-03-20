@@ -8,15 +8,16 @@ import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.DoubleSummaryStatistics;
+import java.util.*;
 
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-       FileReader readme = new FileReader("coffee.txt");  //give file a variable
+        FileReader readme = new FileReader("coffee.txt");  //give file a variable
         BufferedReader bufReader = new BufferedReader(readme);  //
 
-        ArrayList inputList = new ArrayList();
+        ArrayList inputList = new ArrayList();     //ArrayList to save the coffee.txt into
         String line = bufReader.readLine();
 
         /*while (line != null) {
@@ -24,19 +25,34 @@ public class Main {
             System.out.println(line);
         }*/
 
-        while (line != null) {
-            System.out.println(line);
-            String [] item = line.split(";");
-            inputList.add(item[0]);
-            inputList.add(Double.parseDouble(item[1]));
-            inputList.add(Double.parseDouble(item[2]));
+        while (line != null) {                                  //loop to put coffee.txt into arraylist
+            String[] item = line.split(";");
+            int z = 0;
+            inputList.add(item[z]);
+            inputList.add(Double.parseDouble(item[z + 1]));
+            inputList.add(Double.parseDouble(item[z + 2]));
             line = bufReader.readLine();
+
+            String tempName = item[0];
+            double tempCostToMake = Double.parseDouble(item[1]);
+            double tempCostToCustomer = Double.parseDouble(item[2]);
+
+            z = z + 3;
+
+            //System.out.println(inputList);
+            //getData.Drink(inputList);
+
+
+            Drink cappuccino =
+                    new Drink(tempName, tempCostToMake, tempCostToCustomer);
+            cappuccino.sold();
+            cappuccino.writeEndOfDay();
+
+            Drink espresso =
+                    new Drink(tempName, tempCostToMake, tempCostToCustomer);
+
         }
-
-        System.out.println(inputList);
-
-                //Drink espresso =
-                 //    new Drink(ArrayList(0), temp1FromString, temp2FromString);
-            }
     }
+}
+
 
