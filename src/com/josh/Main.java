@@ -29,30 +29,99 @@ public class Main {
             String[] item = line.split(";");
             int z = 0;
             inputList.add(item[z]);
-            inputList.add(Double.parseDouble(item[z + 1]));
+            inputList.add(item[z + 1]);
             inputList.add(Double.parseDouble(item[z + 2]));
             line = bufReader.readLine();
 
-            String tempName = item[0];
-            double tempCostToMake = Double.parseDouble(item[1]);
-            double tempCostToCustomer = Double.parseDouble(item[2]);
-
             z = z + 3;
+        }
+        bufReader.close();
 
-            //System.out.println(inputList);
-            //getData.Drink(inputList);
+        System.out.println(inputList);
+        String tempName = inputList.get(0).toString();
+        double tempCostToMake = Double.parseDouble(inputList.get(1).toString());
+        double tempCostToCustomer = Double.parseDouble(inputList.get(2).toString());
 
-
-            Drink cappuccino =
-                    new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        /*    Drink cappuccino =
+                    new Drink(inputList.get(0).toString(), Double.parseDouble(inputList.get(1).toString()), (inputList.get(2).toString()); //tempName, tempCostToMake, tempCostToCustomer
             cappuccino.sold();
             cappuccino.writeEndOfDay();
+        */
+        //method to change variable z and to
+        Drink cappuccino =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        cappuccino.sold();
+        cappuccino.writeEndOfDay();
 
-            Drink espresso =
-                    new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        tempName = inputList.get(3).toString();
+        tempCostToMake = Double.parseDouble(inputList.get(4).toString());
+        tempCostToCustomer = Double.parseDouble(inputList.get(5).toString());
 
-        }
+        Drink espresso =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        espresso.sold();
+        espresso.writeEndOfDay();
+
+
+        Drink latte =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        latte.sold();
+        latte.writeEndOfDay();
+
+        Drink blackTea =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        blackTea.sold();
+        blackTea.writeEndOfDay();
+
+        Drink herbalTea =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        herbalTea.sold();
+        herbalTea.writeEndOfDay();
+
+        Drink macchiato =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        macchiato.sold();
+        macchiato.writeEndOfDay();
+
+        Drink americano =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        americano.sold();
+        americano.writeEndOfDay();
+
+        Drink coldPress =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        coldPress.sold();
+        coldPress.writeEndOfDay();
+
+        Drink hotChocolate =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        hotChocolate.sold();
+        hotChocolate.writeEndOfDay();
+
+        Drink chaiTea =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        chaiTea.sold();
+        chaiTea.writeEndOfDay();
+
+        Drink mocha =
+                new Drink(tempName, tempCostToMake, tempCostToCustomer);
+        chaiTea.sold();
+        chaiTea.writeEndOfDay();
+
+
+
+
+
+
+
+    }
+    /*private static String, double, double getData(ArrayList inputList) {
+        tempName = inputList.get(3).toString();
+        tempCostToMake = Double.parseDouble(inputList.get(4).toString());
+        tempCostToCustomer = Double.parseDouble(inputList.get(5).toString());
+
+        return tempName, tempCostToMake, tempCostToCustomer;
+*/
     }
 }
-
 
