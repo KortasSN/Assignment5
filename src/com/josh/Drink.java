@@ -1,5 +1,6 @@
 package com.josh;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -55,7 +56,8 @@ public class Drink {
         this.name = drinkName;
         this.costToMake = moneyCostToMake;
         this.costToCustomer = moneyCostToCustomer;
-        //this.amountSold;
+        this.sold();        //method to get amount sold
+        //this.writeEndOfDay();       //method to write file
 
     }
 
@@ -78,9 +80,10 @@ public class Drink {
     public void writeEndOfDay() throws IOException{
 
         FileWriter writer = new FileWriter("sales-report.txt", true);
-        writer.write(this.name + ": Sold " + amountSold + ", Expenses $" + (this.costToMake*amountSold) + ", Revenue $" + (amountSold*this.costToCustomer) + ", Profit $" + ((
+        BufferedWriter bufWriter = new BufferedWriter(writer);
+        bufWriter.write(this.name + ": Sold " + amountSold + ", Expenses $" + (this.costToMake*amountSold) + ", Revenue $" + (amountSold*this.costToCustomer) + ", Profit $" + ((
         this.costToCustomer*amountSold) - (this.costToMake*amountSold) + " \n  "));
-        writer.close();
+        bufWriter.close();
     }
 
 }

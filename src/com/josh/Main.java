@@ -51,116 +51,116 @@ public class Main {
 
         Drink cappuccino =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        cappuccino.sold();        //method to get amount sold
+        //cappuccino.sold();        //method to get amount sold
         cappuccino.writeEndOfDay();       //method to write file
 
         /*tempName = inputList.get(y).toString();
         tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
         tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 */
-        y = y + 3;
+        //y = y + 3;
         Drink espresso =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        espresso.sold();
+        //espresso.sold();
         espresso.writeEndOfDay();
 
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
         Drink latte =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        latte.sold();
+        //latte.sold();
         latte.writeEndOfDay();
 
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
         Drink blackTea =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        blackTea.sold();
+        //blackTea.sold();
         blackTea.writeEndOfDay();
 
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
         Drink herbalTea =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        herbalTea.sold();
+        //herbalTea.sold();
         herbalTea.writeEndOfDay();
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
 
         Drink macchiato =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
         macchiato.sold();
-        macchiato.writeEndOfDay();
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //macchiato.writeEndOfDay();
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
 
         Drink americano =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        americano.sold();
+        //americano.sold();
         americano.writeEndOfDay();
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
 
         Drink coldPress =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        coldPress.sold();
-        coldPress.writeEndOfDay();
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //coldPress.sold();
+        //coldPress.writeEndOfDay();
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
 
         Drink hotChocolate =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        hotChocolate.sold();
+        //hotChocolate.sold();
         hotChocolate.writeEndOfDay();
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
         Drink coffee =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        coffee.sold();
+        //coffee.sold();
         coffee.writeEndOfDay();
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
         Drink chaiTea =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        chaiTea.sold();
+        //chaiTea.sold();
         chaiTea.writeEndOfDay();
-        y = y + 3;
-        tempName = inputList.get(y).toString();
-        tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
-        tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
+        //y = y + 3;
+        //tempName = inputList.get(y).toString();
+        //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
+        //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
 
         Drink mocha =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
-        chaiTea.sold();
-        chaiTea.writeEndOfDay();
+        //chaiTea.sold();
+        mocha.writeEndOfDay();
         y = y + 3;
         tempName = inputList.get(y).toString();
         tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
