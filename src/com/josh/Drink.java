@@ -53,17 +53,25 @@ public class Drink {
 
     //Constructor
     Drink(String drinkName, double moneyCostToMake, double moneyCostToCustomer) {
-        System.out.println("display if comes here");
+        //System.out.println("display if comes here");    //for testing
         this.name = drinkName;
         this.costToMake = moneyCostToMake;
         this.costToCustomer = moneyCostToCustomer;
         this.sold();        //method to get amount sold
-        //this.writeEndOfDay();       //method to write file
+
+
 
     }
 
+    public void getInfo(ArrayList temp, int y) {  //attempt to get information
 
-    public int sold() {
+        this.name = temp.get(y).toString();
+        this.costToMake = Double.parseDouble(temp.get(y + 1).toString());
+        this.costToCustomer = Double.parseDouble(temp.get(y + 2).toString());
+    }
+
+
+    public int sold() {       //method for how many sold for the day
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -71,14 +79,14 @@ public class Drink {
                 System.out.println("How many " + this.name + " were sold today?");
                 this.amountSold = scanner.nextInt();
             //} catch (NumberFormatException ie) {
-            //    System.out.println("Please enter a whole number");
+         //       System.out.println("Please enter a whole number");
         return amountSold;
         }
         }
-    //}
 
 
-    public void writeEndOfDay() throws IOException{
+
+    public void writeEndOfDay() throws IOException{      //write file at end of day
 
         FileWriter writer = new FileWriter("sales-report.txt", true);
         BufferedWriter bufWriter = new BufferedWriter(writer);
