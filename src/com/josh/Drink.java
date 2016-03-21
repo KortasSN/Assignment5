@@ -70,7 +70,6 @@ public class Drink {
         this.costToCustomer = Double.parseDouble(temp.get(y + 2).toString());
     }
 
-
     public int sold() {       //method for how many sold for the day
         Scanner scanner = new Scanner(System.in);
 
@@ -85,7 +84,6 @@ public class Drink {
         }
 
 
-
     public void writeEndOfDay() throws IOException{      //write file at end of day
 
         FileWriter writer = new FileWriter("sales-report.txt", true);
@@ -94,5 +92,4 @@ public class Drink {
         this.costToCustomer*amountSold) - (this.costToMake*amountSold) + " \n  "));
         bufWriter.close();
     }
-
 }

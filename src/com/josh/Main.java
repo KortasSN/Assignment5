@@ -112,7 +112,6 @@ public class Main {
         //tempCostToMake = Double.parseDouble(inputList.get(y + 1).toString());
         //tempCostToCustomer = Double.parseDouble(inputList.get(y + 2).toString());
 
-
         Drink americano =
                 new Drink(tempName, tempCostToMake, tempCostToCustomer);
         //americano.sold();
