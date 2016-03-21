@@ -41,36 +41,45 @@ public class Drink {
         this.costToCustomer = costToCustomer;
     }
 
+    public int getAmountSold() {
+        return amountSold;
+    }
+
+    public void setAmountSold(int amountSold) {
+        this.amountSold = amountSold;
+    }
+
 
     //Constructor
     Drink(String drinkName, double moneyCostToMake, double moneyCostToCustomer) {
         this.name = drinkName;
         this.costToMake = moneyCostToMake;
         this.costToCustomer = moneyCostToCustomer;
-        //int amountSold;
+        //this.amountSold;
 
     }
 
 
-    public void sold() {
+    public int sold() {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            try {
+            //try {
                 System.out.println("How many " + this.name + " were sold today?");
-                int amountSold = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException ie) {
-                System.out.println("Please enter a whole number");
-            }
+                this.amountSold = scanner.nextInt();
+            //} catch (NumberFormatException ie) {
+            //    System.out.println("Please enter a whole number");
+        return amountSold;
         }
-    }
+        }
+    //}
 
 
     public void writeEndOfDay() throws IOException{
 
-        FileWriter writer = new FileWriter("sales-report.txt");
+        FileWriter writer = new FileWriter("sales-report.txt", true);
         writer.write(this.name + ": Sold " + amountSold + ", Expenses $" + (this.costToMake*amountSold) + ", Revenue $" + (amountSold*this.costToCustomer) + ", Profit $" + ((
-        this.costToCustomer*amountSold) - (this.costToMake*amountSold)));
+        this.costToCustomer*amountSold) - (this.costToMake*amountSold) + " \n  "));
         writer.close();
     }
 
